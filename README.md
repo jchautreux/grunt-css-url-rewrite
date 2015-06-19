@@ -7,13 +7,13 @@ This task provides a way to rewrite all URL's found within a stylesheet (those w
 Install this plugin with the command:
 
 ```js
-npm install grunt-css-url-rewrite
+npm install grunt-css-url-rewrite-absolute
 ```
 
 Next, add this line to your project's grunt file:
 
 ```js
-grunt.loadNpmTasks("grunt-css-url-rewrite");
+grunt.loadNpmTasks("grunt-css-url-rewrite-absolute");
 ```
 
 Lastly, add configuration settings to your grunt.js file (see below).

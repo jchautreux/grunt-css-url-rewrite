@@ -18,7 +18,7 @@ module.exports = function(grunt) {
   // Grunt utils
   var async = grunt.util.async;
 
-  grunt.registerMultiTask("cssUrlRewrite", "Rewrite URIs inside your stylesheets", function() {
+  grunt.registerMultiTask("cssUrlRewriteAbs", "Rewrite URIs inside your stylesheets", function() {
     var opts = this.options();
     var done = opts.parallel === false ? function() {} : this.async();
 
