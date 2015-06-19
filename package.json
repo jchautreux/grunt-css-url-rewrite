@@ -1,31 +1,31 @@
 {
-  "name" : "grunt-css-url-rewrite-absolute",
-  "description" : "A grunt task for rewriting urls inside a stylesheet",
-  "version" : "0.3.5",
-  "homepage" : "",
-  "author" : {
-    "name" : "Jean-Christophe Hautreux",
-    "email" : "hautreux.jc@gmail.com"
+  "name": "grunt-css-url-rewrite-absolute",
+  "description": "A grunt task for rewriting urls inside a stylesheet",
+  "version": "0.3.6",
+  "homepage": "",
+  "author": {
+    "name": "Jean-Christophe Hautreux",
+    "email": "hautreux.jc@gmail.com"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "git://github.com/jchautreux/grunt-css-url-rewrite.git"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jchautreux/grunt-css-url-rewrite.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/jchautreux/grunt-css-url-rewrite/issues"
+  "bugs": {
+    "url": "https://github.com/jchautreux/grunt-css-url-rewrite/issues"
   },
-  "main" : "grunt.js",
-  "bin" : "bin/grunt-css-url-rewrite",
-  "engines" : {
-    "node" : ">= 0.8.0"
+  "main": "grunt.js",
+  "bin": "bin/grunt-css-url-rewrite",
+  "engines": {
+    "node": ">= 0.8.0"
   },
-  "scripts" : {
-    "test" : "grunt test"
+  "scripts": {
+    "test": "grunt test"
   },
-  "dependencies" : {
-    "request" : "~2.11",
-    "buffers" : "~0.1.1",
-    "mime" : "1.2.x"
+  "dependencies": {
+    "request": "~2.11",
+    "buffers": "~0.1.1",
+    "mime": "1.2.x"
   },
   "devDependencies": {
     "grunt": "0.4.x",
@@ -33,7 +33,11 @@
     "grunt-contrib-jshint": "0.1.x",
     "grunt-contrib-nodeunit": "0.1.x"
   },
-  "keywords" : [
-    "gruntplugin", "base64", "data URI", "css", "image"
+  "keywords": [
+    "gruntplugin",
+    "base64",
+    "data URI",
+    "css",
+    "image"
   ]
 }
