@@ -90,7 +90,7 @@ exports.init = function(grunt) {
 
         // Skip external
         if(opts.skipExternal && rExternal.test(img)) {
-          result += 'url("' + img + '")';
+          result += 'url("' + img + params + '")';
           complete();
           return;
         }
