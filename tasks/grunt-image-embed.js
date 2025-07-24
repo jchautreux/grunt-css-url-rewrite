@@ -7,36 +7,35 @@
  */
 
 // Internal libs
-var grunt_encode = require("./lib/encode");
+var grunt_encode = require('./lib/encode');
+var async = require('async');
+var _ = require('lodash');
 
-module.exports = function(grunt) {
-  "use strict";
+module.exports = function (grunt) {
+  'use strict';
 
   // Grunt lib init
   var encode = grunt_encode.init(grunt);
 
-  // Grunt utils
-  var async = grunt.util.async;
-
-  grunt.registerMultiTask("cssUrlRewrite", "Rewrite URIs inside your stylesheets", function() {
+  grunt.registerMultiTask('cssUrlRewrite', 'Rewrite URIs inside your stylesheets', function () {
     var opts = this.options();
-    var done = opts.parallel === false ? function() {} : this.async();
+    var done = opts.parallel === false ? function () {} : this.async();
 
     var filesRemaining = this.files.length;
 
     // Process each src file
-    this.files.forEach(function(file) {
+    this.files.forEach(function (file) {
       var dest = file.dest;
       var tasks;
 
-      tasks = file.src.map(function(srcFile) {
-        return function(callback) {
+      tasks = file.src.map(function (srcFile) {
+        return function (callback) {
           encode.stylesheet(srcFile, opts, callback);
         };
       });
 
       // Once all files have been processed write them out.
-      var callback = function(err, output) {
+      var callback = function (err, output) {
         grunt.file.write(dest, output);
         grunt.log.writeln('File "' + dest + '" created.');
         filesRemaining--;
@@ -46,7 +45,7 @@ module.exports = function(grunt) {
       };
 
       if (opts.parallel === false) {
-        grunt.util._.each(tasks, function(task) {
+        _.each(tasks, function (task) {
           task(callback);
         });
       } else {
@@ -55,5 +54,4 @@ module.exports = function(grunt) {
       }
     });
   });
-
 };

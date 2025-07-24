@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-url-rewrite-absolute",
   "description": "A grunt task for rewriting urls inside a stylesheet",
-  "version": "0.3.9",
+  "version": "1.6.0",
   "homepage": "",
   "author": {
     "name": "Jean-Christophe Hautreux",
@@ -17,21 +17,23 @@
   "main": "grunt.js",
   "bin": "bin/grunt-css-url-rewrite",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 10"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt"
   },
   "dependencies": {
+    "async": "^3.2.6",
     "request": "~2.11",
     "buffers": "~0.1.1",
     "mime": "1.2.x"
   },
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-watch": "0.2.x",
-    "grunt-contrib-jshint": "0.1.x",
-    "grunt-contrib-nodeunit": "0.1.x"
+    "grunt": "^1.6.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-nodeunit": "^5.0.0",
+    "lodash": "^4.17.21"
   },
   "keywords": [
     "gruntplugin",
