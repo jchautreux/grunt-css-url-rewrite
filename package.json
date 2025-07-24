@@ -15,7 +15,9 @@
     "url": "https://github.com/jchautreux/grunt-css-url-rewrite/issues"
   },
   "main": "grunt.js",
-  "bin": "bin/grunt-css-url-rewrite",
+  "bin": {
+    "grunt-css-url-rewrite-absolute": "bin/grunt-css-url-rewrite"
+  },
   "engines": {
     "node": ">= 10"
   },
